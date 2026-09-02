@@ -1,0 +1,24 @@
+{
+  "name": "wwt-market-scan",
+  "owner": {
+    "name": "Martin Nystrom",
+    "email": "martin.nystrom@wwt.com"
+  },
+  "description": "Self-hosted marketplace for the wwt-market-scan plugin.",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "wwt-market-scan",
+      "source": "./",
+      "description": "Build a rubric-based competitive market scan comparing several vendors/products in a technology category for senior leadership, using parallel per-vendor subagents plus a QA verification pass, then package it as an executive summary + market landscape + per-vendor deep dives + strategic recommendation.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Martin Nystrom",
+        "email": "martin.nystrom@wwt.com"
+      },
+      "homepage": "https://github.com/MartinGNystrom/market-scan",
+      "license": "MIT",
+      "keywords": ["market-scan", "competitive-analysis", "vendor-comparison", "rubric", "wwt"]
+    }
+  ]
+}

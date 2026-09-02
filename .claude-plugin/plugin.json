@@ -1,0 +1,14 @@
+{
+  "name": "wwt-market-scan",
+  "displayName": "Market Scan",
+  "version": "1.0.0",
+  "description": "Build a rubric-based competitive market scan comparing several vendors/products in a technology category for senior leadership — a weighted feature rubric with confidence-tagged ratings, an internal pipeline/relationship signal overlay where available, packaged as an executive summary + market landscape + per-vendor deep dives + strategic recommendation, published as a deck or report.",
+  "author": {
+    "name": "Martin Nystrom",
+    "email": "martin.nystrom@wwt.com"
+  },
+  "homepage": "https://github.com/MartinGNystrom/market-scan",
+  "repository": "https://github.com/MartinGNystrom/market-scan",
+  "license": "MIT",
+  "keywords": ["market-scan", "competitive-analysis", "vendor-comparison", "rubric", "wwt"]
+}
