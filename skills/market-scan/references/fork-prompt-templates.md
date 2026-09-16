@@ -84,3 +84,48 @@ the final package, not the pre-QA draft.
   prior position / what changed / new read — rather than rebuilding the full rubric from scratch.
   Keep that follow-up format ready; it's a natural cadence for any category that's still evolving
   when the original scan ships.
+
+## Notes from the second run (2026-09 Xage scan)
+
+- Confidence-weighted scoring (discount every Low-confidence rating, keep High-confidence ratings
+  at full value, then rank on that number) materially changed the outcome, not just the framing —
+  the scan's own subject vendor dropped from a raw #3 to a confidence-weighted #4 of 5, swapping
+  places with a competitor whose ratings were fewer but better-evidenced. Treat this as a required
+  step (now SKILL.md step 7), not an optional nice-to-have layered on top of a raw tally.
+- The QA pass caught two consistency failures that both trace back to the same root cause: the
+  fork-prompt template's own stated default for missing evidence ("no evidence found — scored
+  Non-viable/Low confidence by default") has to be applied literally and identically across every
+  vendor, not reinterpreted per subagent. In this run, five vendors landed on five different tiers
+  for a feature where every one of them had the identical "no evidence found" substance — the QA
+  pass had to normalize all five to the same default before the report could be trusted.
+- A subagent's narrative can flatly contradict its own feature table one paragraph later — one
+  vendor's write-up claimed a growth metric came "with no revenue figures" directly after the
+  feature table cited a specific third-party revenue estimate for that same vendor. The QA pass's
+  confidence-language check needs to read the narrative against its own rubric table, not just the
+  narrative in isolation, to catch this class of error.
+- None of five subagents could resolve whether a CRM dollar figure was gross profit or contract
+  value — that's an expected outcome of the underlying data, not a per-subagent failure. Don't ask
+  each subagent to solve it independently; let the QA pass standardize one disclosure sentence and
+  apply it identically across every vendor's internal-signal section.
+- When the scan's actual focal vendor has zero internal signal (a dormant, unenriched CRM account),
+  that absence is often the single most decision-relevant fact in the report — surface it in the
+  executive summary, not just as a skipped line in that vendor's own subsection.
+- A "(scanned)" / "not scanned here" annotation added to the market-landscape cluster cards, meant
+  to flag which adjacent vendors were actually researched, was flagged by the stakeholder as adding
+  clutter without adding clarity and was removed. The per-vendor deep dives and appendix already
+  make the scanned/not-scanned distinction obvious; plain prose ("X, alongside Y and Z") in the
+  landscape section is enough.
+- A stakeholder correction mid-review — "make the top metrics comparative with other vendors, not
+  about the quality of the analysis or the score itself" — was really about placement, not content:
+  a follow-up clarified the confidence-weighted score and raw score should stay in the per-vendor
+  deep dives and appendix, just not as the headline executive-summary stat callouts. Read a
+  narrowing correction literally before applying it broadly across the whole document.
+- Asked for "something like McKinsey or Gartner would do" for the market landscape, a hand-built
+  inline SVG 2x2 chart (no external charting library) worked well when it plotted two purely
+  factual, comparative axes (architecture orientation; funding/valuation on a log scale) rather than
+  any axis derived from this scan's own confidence or maturity scoring — and used neutral,
+  axis-specific quadrant labels instead of Gartner's own trademarked quadrant names.
+- The initial appendix draft summarized the full per-vendor rubric as "available on request" rather
+  than shipping it, which undercut the report's own audit-trail claim; the stakeholder asked for the
+  full scoring appendix as a direct follow-up. Ship the complete per-feature table for every vendor
+  in the document itself from the start (SKILL.md step 8's Appendix bullet now says this directly).
